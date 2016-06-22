@@ -4,7 +4,9 @@
 /** Map relative paths to URLs. */
 const map: any = {
   'firebase': 'vendor/firebase/firebase.js',
-  'angularfire2': 'vendor/angularfire2'
+  'angularfire2': 'vendor/angularfire2',
+  'ng2-bootstrap': 'vendor/ng2-bootstrap',
+  'moment': 'vendor/moment/moment.js',
 };
 
 /** User packages configuration. */
@@ -12,7 +14,10 @@ const packages: any = {
   angularfire2: {
     defaultExtension: 'js',
     main: 'angularfire2.js'
-  }
+  },
+  'vendor/ng2-bootstrap': {
+    defaultExtension: 'js',
+  },
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

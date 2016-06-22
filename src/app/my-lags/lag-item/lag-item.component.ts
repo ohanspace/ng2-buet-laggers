@@ -1,17 +1,26 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
+import { CollapseDirective } from 'ng2-bootstrap/ng2-bootstrap';
 
 @Component({
   moduleId: module.id,
   selector: 'lag-item',
-  template: `
-    <p>{{lagItem.courseCode}}</p>
-  `,
+  directives: [CollapseDirective],
+  templateUrl: 'lag-item.component.html'
 })
 export class LagItemComponent implements OnInit {
   @Input() lagItem: any;
-  constructor() {}
+  @Output() remove: EventEmitter<string> = new EventEmitter(false);
+  public isCollapsed:boolean = true;
+  constructor() {
+    
+    
+  }
 
+  onRemove(key){
+    this.remove.emit(key);
+  }
   ngOnInit() {
+    //console.log(this.lagItem);
   }
 
 }

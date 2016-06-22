@@ -1,0 +1,10 @@
+<button type="button" class="btn btn-primary"
+        (click)="isCollapsed = !isCollapsed">{{lagItem.courseCode}}
+        
+</button>
+<span class="glyphicon glyphicon-remove" (click)="onRemove(lagItem.$key)"></span>
+<hr>
+<div [collapse]="isCollapsed" class="card card-block card-header">
+  <div class="well well-lg">Some content</div>
+</div>
+
